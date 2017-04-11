@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ACLabs1", "D:\AlGr\ACLabs1\", "{C7C7F8A3-9FBD-4A04-A119-BD1C8499DE06}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51872"
+		Debug.AspNetCompiler.PhysicalPath = "D:\AlGr\ACLabs1\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51872\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51872"
+		Release.AspNetCompiler.PhysicalPath = "D:\AlGr\ACLabs1\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51872\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51872"
+		SlnRelativePath = "D:\AlGr\ACLabs1\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeTravian", "FakeTravian\FakeTravian.csproj", "{99F16F99-3220-480E-80D0-326CF8D35494}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7C7F8A3-9FBD-4A04-A119-BD1C8499DE06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C7F8A3-9FBD-4A04-A119-BD1C8499DE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C7F8A3-9FBD-4A04-A119-BD1C8499DE06}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C7F8A3-9FBD-4A04-A119-BD1C8499DE06}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{99F16F99-3220-480E-80D0-326CF8D35494}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99F16F99-3220-480E-80D0-326CF8D35494}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99F16F99-3220-480E-80D0-326CF8D35494}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99F16F99-3220-480E-80D0-326CF8D35494}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
