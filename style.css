@@ -1,12 +1,12 @@
-﻿#low {
-    color:red;
+﻿tr, td {
+    border: 1px solid black;
+    text-align: center;
 }
 
-p {
-    color:green;
+table {
+    width: 50%;
 }
 
-#title {
-    color:brown;
-    text-align:center;
+th {
+    border: 1px solid black;
 }
