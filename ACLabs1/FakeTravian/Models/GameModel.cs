@@ -41,6 +41,11 @@ namespace FakeTravian.Models
         public int Level { get; set; }
 
         public ResourceType Type { get; set; }
+
+        public double GetProductionPerHour(int? level = null)
+        {
+            return (level ?? this.Level) * 13;
+        }
     }
 
     public enum ResourceType
@@ -50,5 +55,4 @@ namespace FakeTravian.Models
         Clay,
         Wood
     }
-
 }
