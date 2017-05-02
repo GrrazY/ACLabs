@@ -55,3 +55,71 @@ td {
     border-style: solid;
     border-radius:25px;
 }
+
+#img_village {
+    position:absolute;
+    top:207px;
+    left:584px;
+}
+
+.mine-wrapper {
+    position: absolute;
+    top: 207px;
+    left: 584px;
+}
+
+.mine-level {
+    position: absolute;
+    top: 120px;
+    left: 150px;
+    width: 30px;
+    height: 30px;
+    background: green;
+    border-radius: 15px;
+    transition:all 0.5s linear;
+}
+
+.mine-clay {
+    background: orange;
+    top: 235px;
+    left: 150px;
+}
+
+.mine-wheat {
+    background: yellow;
+    top: 140px;
+    left: 90px;
+}
+
+.mine-iron {
+    background: grey;
+    top: 65px;
+    left: 100px;
+}
+
+.mine-wood {
+    background: brown;
+    top: 190px;
+    left: 200px;
+    transform: translate(10.5px, 10.5px);
+}
+
+.mine-level:hover {
+    transform: scale(1.5);
+}
+
+@keyframes upgrading {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.upgrading {
+    animation: upgrading 0.5s infinite;
+}
