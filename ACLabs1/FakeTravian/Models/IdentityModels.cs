@@ -35,5 +35,7 @@ namespace FakeTravian.Models
 
         public DbSet<Mine> Mines { get; set; }
         public DbSet<City> Cities { get; set; }
+        public DbSet<Building> Buildings { get; set; }
+        public DbSet<BuildingType> BuildingTypes { get; set; }
     }
 }

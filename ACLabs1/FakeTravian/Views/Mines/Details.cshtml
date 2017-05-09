@@ -31,3 +31,11 @@ else if (this.Model.Type == FakeTravian.Models.ResourceType.Wood)
 <p>Current production: @(this.Model.Level * 13)</p>
 <p>Production for next level: @((this.Model.Level + 1) * 13)</p>
 
+@using (Html.BeginForm("Upgrade", "Mines"))
+{
+    //<input name="mineId" value="10" type="hidden"/>
+    @Html.HiddenFor(m => m.MineId)
+    <div>Do a fast upgrade ?: @Html.CheckBox("fastUpgrade") </div>
+    <button type="submit">Upgrade</button>
+}
+

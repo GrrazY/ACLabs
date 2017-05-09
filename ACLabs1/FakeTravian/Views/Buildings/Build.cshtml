@@ -1,0 +1,7 @@
+﻿@model FakeTravian.Controllers.BuildViewModel
+
+@{
+    ViewBag.Title = "Build";
+}
+
+@Html.ListBoxFor(m => m.SelectedBuildingType, this.Model.BuildingTypes)

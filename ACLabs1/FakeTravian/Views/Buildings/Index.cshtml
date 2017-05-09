@@ -1,0 +1,32 @@
+﻿@model FakeTravian.Models.City
+
+@{
+    ViewBag.Title = "Buildings";
+}
+
+<table>
+    <tr>
+        <td>BuildingId</td>
+        <td>Level</td>
+        <td>Action</td>
+    </tr>
+    @foreach (var b in this.Model.Buildings)
+    {
+        <tr>
+            @{
+                if(b.BuildingType == null)
+                    {
+                        <td>Empty</td>
+                        <td></td>
+                        <td>@Html.ActionLink("Build", "Build", new { BuildingId = b.BuildingId })</td>
+                }
+                else
+                {
+                    <td>b.BuildingType.Name</td>
+                    <td>@(b.Level)</td>
+                    <td>@Html.ActionLink("Build", "Build", new { BuildingId = b.BuildingId })</td>
+                }
+            }
+        </tr>
+    }
+</table>
