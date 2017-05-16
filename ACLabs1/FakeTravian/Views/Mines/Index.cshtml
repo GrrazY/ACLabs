@@ -21,10 +21,14 @@
             <td><img src="~/Content/img/icon-@(mine.Type).png"/></td>
             <td>@mine.Type</td>
             <td>@mine.Level</td>
-            <td>@Html.ActionLink("Details", "Details", new { mineId = mine.MineId })</td>
+            <td><span class="mine-details-btn" data-mine-id="@mine.MineId">Details</span></td>
             <td class="hourProduction">@mine.GetProductionPerHour()</td>
         </tr>
     }
+    <div id="mine-details-container">
+        <div class="close-btn">X</div>
+        <div class="content"></div>
+    </div>
 </table>
 @section Scripts {
     <script src="~/Scripts/Javascript/mines.js"></script>
