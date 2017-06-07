@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using DataAccess;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace FakeTravian.Controllers
 {
     public class BuildingsController : Controller
     {
-        Models.ApplicationDbContext dbContext = new Models.ApplicationDbContext();
+        ApplicationDbContext dbContext = new ApplicationDbContext();
 
         // GET: Buildings
         public ActionResult Index()

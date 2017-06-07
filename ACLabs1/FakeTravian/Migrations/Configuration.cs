@@ -1,19 +1,20 @@
 namespace FakeTravian.Migrations
 {
+    using DataAccess;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<FakeTravian.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<DataAccess.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "FakeTravian.Models.ApplicationDbContext";
+            ContextKey = "DataAccess.ApplicationDbContext";
         }
 
-        protected override void Seed(FakeTravian.Models.ApplicationDbContext context)
+        protected override void Seed(DataAccess.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -30,9 +31,9 @@ namespace FakeTravian.Migrations
 
             context.BuildingTypes.AddOrUpdate(
                 p => p.Name,
-                new Models.BuildingType { Name = "Garnary" },
-                new Models.BuildingType { Name = "Barn" },
-                new Models.BuildingType { Name = "Barracks" });
+                new BuildingType { Name = "Garnary" },
+                new BuildingType { Name = "Barn" },
+                new BuildingType { Name = "Barracks" });
 
             var cities = context.Cities.ToList();
 
@@ -43,7 +44,7 @@ namespace FakeTravian.Migrations
                     var building = city.Buildings.ElementAtOrDefault(i);
                     if(building == null)
                     {
-                        building = new Models.Building { City = city };
+                        building = new Building { City = city };
                         city.Buildings.Add(building);
                     }
                 }

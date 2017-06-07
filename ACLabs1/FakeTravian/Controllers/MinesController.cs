@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using BusinessLogic;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,39 +11,26 @@ namespace FakeTravian.Controllers
     [Authorize]
     public class MinesController : Controller
     {
-        Models.ApplicationDbContext dbContext = new Models.ApplicationDbContext();
+        MinesService ms;
+
+        public MinesController()
+        {
+           ms = new MinesService();
+        }
 
         // GET: Mines
         public ActionResult Index()
         {
             var userId = this.User.Identity.GetUserId();
-            var user = dbContext.Users.Find(userId);
-            var city = user.Cities.First();
-            this.UpdateResources(city);
+            var city = ms.UpdateResources(userId);
             return View(city);
         }
 
+        /*
         public ActionResult Details(int mineId)
         {
-            var mine = dbContext.Mines.Find(mineId);
+            var mine = mr.GetMine(mineId);
             return View(mine);
-        }
-
-        private void UpdateResources(FakeTravian.Models.City city)
-        {
-            var start = DateTime.Now;
-            foreach (var res in city.Resources)
-            {
-                foreach (var mine in city.Mines)
-                {
-                    if (mine.Type == res.Type)
-                    {
-                        res.Value += mine.GetProductionPerHour() * (start - res.LastUpdate).TotalHours;
-                    }
-                }
-                res.LastUpdate = start;
-            }
-            dbContext.SaveChanges();
         }
 
         [HttpPost]
@@ -81,5 +69,6 @@ namespace FakeTravian.Controllers
                 Message = $"Upgrade Successfull"
             });
         }
+        */
     }
 }

@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using FakeTravian.Models;
 using System.Collections.Generic;
+using DataAccess;
 
 namespace FakeTravian.Controllers
 {
